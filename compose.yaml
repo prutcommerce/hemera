@@ -1,0 +1,24 @@
+networks:
+  artemis_prutcommerce:
+    external: true
+
+services:
+  melissa:
+    image: 'node:18.4'
+    container_name: melissa.dev
+    working_dir: /srv/melissa
+    command: 'yarn dev'
+    ports:
+      - "5100:5100"
+    volumes:
+      - .:/srv/melissa
+    networks:
+      - artemis_prutcommerce
+
+  deps:
+    image: 'node:18.4'
+    container_name: melissa.deps
+    working_dir: /srv/melissa
+    volumes:
+      - .:/srv/melissa
+    command: 'yarn install'
