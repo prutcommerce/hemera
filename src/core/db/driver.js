@@ -1,12 +1,12 @@
-import { hemera } from 'src'
+import { melissa } from 'src'
 import { mariadb, sequelize } from 'src/deps'
 
 const options = () => ({
   dialect: 'mariadb',
   dialectModule: mariadb,
   dialectOptions: { connectTimeout: 10000 },
-  host: hemera.core.settings.getDatabaseHost(),
-  port: hemera.core.settings.getDatabasePort(),
+  host: melissa.core.settings.getDatabaseHost(),
+  port: melissa.core.settings.getDatabasePort(),
   pool: {
     min: 0,
     max: 2,
@@ -17,7 +17,7 @@ const options = () => ({
 let instance = null
 
 export const driver = () => {
-  if (!instance) instance = new sequelize.Sequelize(hemera.core.settings.getDatabaseUri(), options())
+  if (!instance) instance = new sequelize.Sequelize(melissa.core.settings.getDatabaseUri(), options())
 
   return instance
 }
