@@ -23,14 +23,7 @@ export const up = async queryInterface => queryInterface.createTable('order', {
     type: 'DATETIME NULL',
     allowNull: true,
   },
-  product_id: {
-    type: sequelize.DataTypes.INTEGER.UNSIGNED,
-    references: {
-      model: 'product',
-      key: 'id'
-    },
-    allowNull: false,
-  },
+  product_id: sequelize.DataTypes.INTEGER.UNSIGNED,
   quantity: sequelize.DataTypes.FLOAT,
   status: sequelize.DataTypes.STRING,
 })

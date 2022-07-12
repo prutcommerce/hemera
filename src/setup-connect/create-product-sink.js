@@ -23,7 +23,7 @@ const makeConfig = () => ({
 
 export const createProductSink = async () => {
   const params = {
-    name: 'melissa_unit_sink',
+    name: 'melissa_product_sink',
     config: makeConfig(),
     baseUrl: melissa.core.settings.getConnectUrl(),
   }
