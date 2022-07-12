@@ -14,7 +14,7 @@ export const order = driver => driver.define(ENTITY_NAMES.order, {
   },
   productId: {
     type: sequelize.DataTypes.INTEGER.UNSIGNED,
-    get: nephele.modelDb.getEncodedId(ENTITY_NAMES.order),
+    get: nephele.modelDb.getEncodedId(ENTITY_NAMES.product),
     set: nephele.modelDb.setEncodedId('productId'),
   },
   quantity: sequelize.DataTypes.FLOAT,
