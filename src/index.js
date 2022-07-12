@@ -4,6 +4,7 @@ import { nephele, yup } from 'src/deps'
 import { migrateDb } from 'src/migrate-db'
 import { getOrders } from 'src/get-orders'
 import { setupServer } from 'src/setup-server'
+import { createOrder } from 'src/create-order'
 import { setupConnect } from 'src/setup-connect'
 
 export const melissa = {
@@ -11,6 +12,7 @@ export const melissa = {
   seedDb,
   migrateDb,
   getOrders,
+  createOrder,
 }
 
 nephele.setupLogger()

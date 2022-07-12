@@ -2,7 +2,7 @@ import { melissa } from 'src'
 
 const make = () => ({
   orders: melissa.getOrders.resolver,
-  bar: ''
+  createOrder: melissa.createOrder.resolver,
 })
 
 export const resolvers = { make }
