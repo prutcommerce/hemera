@@ -1,0 +1,4 @@
+type OrderConnection implements Connection {
+    edges:[OrderEdge!]!
+    pageInfo: PageInfo!
+}

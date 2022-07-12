@@ -1,0 +1,6 @@
+type Order implements Node {
+    id: ID!
+    productId: ID!
+    quantity: String!
+    status: String!
+}

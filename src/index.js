@@ -2,6 +2,7 @@ import { core } from 'src/core'
 import { seedDb } from 'src/seed-db'
 import { nephele, yup } from 'src/deps'
 import { migrateDb } from 'src/migrate-db'
+import { getOrders } from 'src/get-orders'
 import { setupServer } from 'src/setup-server'
 import { setupConnect } from 'src/setup-connect'
 
@@ -9,6 +10,7 @@ export const melissa = {
   core,
   seedDb,
   migrateDb,
+  getOrders,
 }
 
 nephele.setupLogger()

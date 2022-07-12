@@ -9,7 +9,7 @@ services:
     working_dir: /srv/melissa
     command: 'yarn dev'
     ports:
-      - "5100:5100"
+      - "5050:5050"
     volumes:
       - .:/srv/melissa
     networks:

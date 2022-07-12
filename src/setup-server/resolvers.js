@@ -1,5 +1,7 @@
+import { melissa } from 'src'
+
 const make = () => ({
-  foo: '',
+  orders: melissa.getOrders.resolver,
   bar: ''
 })
 

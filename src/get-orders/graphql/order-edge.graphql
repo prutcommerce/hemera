@@ -1,0 +1,4 @@
+type OrderEdge implements Edge {
+    node: Order!
+    cursor: ID!
+}
