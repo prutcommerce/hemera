@@ -1,4 +1,5 @@
 import { core } from 'src/core'
+import { logo } from 'src/logo'
 import { seedDb } from 'src/seed-db'
 import { nephele, yup } from 'src/deps'
 import { migrateDb } from 'src/migrate-db'
@@ -15,6 +16,8 @@ export const melissa = {
   getOrders,
   createOrder,
 }
+
+logo.print()
 
 nephele.setupLogger()
 nephele.setupValidation(yup)
